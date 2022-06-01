@@ -33,12 +33,11 @@ public class MainApp {
 
       // пользователи с машинами
       for (User user : userService.listUsers()) {
-         System.out.println(user + " " + user.getCar());
+         System.out.println(user + " " + user.getCar()+" оно работает");
       }
 
       // достать юзера, владеющего машиной по ее модели и серии
-      System.out.println(userService.getCarUser("BMW", 325));
-
+      System.out.println(userService.getCarUser("Volvo", 9)+" и это наконец-то работает");
 
       context.close();
    }
