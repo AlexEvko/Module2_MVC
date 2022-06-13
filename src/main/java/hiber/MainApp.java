@@ -37,7 +37,7 @@ public class MainApp {
       }
 
       // достать юзера, владеющего машиной по ее модели и серии
-      System.out.println(userService.getCarUser("Volvo", 9)+" и это наконец-то работает");
+      System.out.println(userService.getCarByUser("Volvo", 9)+" и это наконец-то работает");
 
       context.close();
    }

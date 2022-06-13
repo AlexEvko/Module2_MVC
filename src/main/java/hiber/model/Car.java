@@ -6,13 +6,12 @@ import javax.persistence.*;
 @Table(name = "cars")
 public class Car {
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "user_id")
+    @OneToOne(cascade = CascadeType.ALL, mappedBy = "car")
     private User user;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "car_id")
+    @Column(name = "id")
     private Long car_id;
 
     @Column(name = "model")
@@ -52,5 +51,13 @@ public class Car {
 
     public void setSeries(int series) {
         this.series = series;
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "model='" + model + '\'' +
+                ", series=" + series +
+                '}';
     }
 }
